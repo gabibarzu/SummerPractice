@@ -1,0 +1,36 @@
+@import "src/styles.scss";
+
+.authentication-container {
+  width: 450px;
+  background-color: $black;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 50%);
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    background-color: $dark-gray;
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      font-size: 24px;
+      padding: 10px;
+      color: $white;
+      cursor: default;
+      transition: 0.3s ease-in-out;
+
+      &.active {
+        background-color: $black;
+      }
+
+      &:hover:not(.active) {
+        background-color: $pale-gray;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+}

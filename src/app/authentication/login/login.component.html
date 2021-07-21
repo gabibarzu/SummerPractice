@@ -1,11 +1,10 @@
-<form class="login-form">
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="username">Username</label>
     <input
+      formControlName="username"
       class="form-control"
       type="text"
-      id="username"
-      name="username"
       placeholder="Your username..."
       required
     />
@@ -13,10 +12,9 @@
   <div class="form-group">
     <label for="password">Password</label>
     <input
+      formControlName="password"
       class="form-control"
       type="password"
-      id="password"
-      name="password"
       placeholder="Your password..."
       required
     />
